@@ -5,7 +5,9 @@ import joblib
 model=joblib.load('linear_regression_model.joblib')
 
 #st.title("********   RS Insurance   ******** ")
-st.markdown("<h1 style='color:blue;'>********   RS Insurance   ********</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: blue;'>********   RS Insurance   ********</h1>", unsafe_allow_html=True)
+
+
 st.header("   Insurance Charges Prediction   ")
 
 st.subheader("Enter the details to predict the insurance charges")
