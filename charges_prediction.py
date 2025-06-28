@@ -5,7 +5,7 @@ import joblib
 model=joblib.load('linear_regression_model.joblib')
 
 st.title("********   RS Insurance   ******** ")
-st.header("       Insurance Charges Prediction")
+st.header("   Insurance Charges Prediction   ")
 
 st.subheader("Enter the details to predict the insurance charges")
 
