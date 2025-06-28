@@ -4,6 +4,20 @@ import joblib
 
 model=joblib.load('linear_regression_model.joblib')
 
+#####
+# Inject background color using HTML and CSS
+st.markdown("""<style>.main {background-color: #f0f8ff; padding: 20px; border-radius: 10px; } </style> """, unsafe_allow_html=True)
+
+# Wrap your content in a <div class="main">
+st.markdown('<div class="main">', unsafe_allow_html=True)
+
+
+
+#########
+
+
+
+
 #st.title("********   RS Insurance   ******** ")
 st.markdown("<h1 style='text-align: center; color: blue;'>********   RS Insurance   ********</h1>", unsafe_allow_html=True)
 
