@@ -14,8 +14,8 @@ st.markdown("<h2 style='text-align: center;'>Insurance Charges Prediction</h2>",
 
 st.subheader("Enter the details to predict the insurance charges")
 
-claim_amount=st.number_input("**Enter the claim amount**: ",min_value=0.0,format="%.2f")
-past_consultations=st.number_input("**Enter the number of past consultations**: ",min_value=0)
+claim_amount=st.number_input("**Enter the claim amount:**",min_value=0.0,format="%.2f")
+past_consultations=st.number_input("**Enter the number of past consultations:** ",min_value=0)
 hospital_expenditure=st.number_input("Enter the hospital expenditure: ",min_value=0.0,format="%.2f")
 annual_salary=st.number_input("Enter the annual salary: ",min_value=0.0,format="%.2f")
 children=st.number_input("Enter the number of children: ",min_value=0)
