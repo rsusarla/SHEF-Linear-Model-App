@@ -5,7 +5,7 @@ import joblib
 
 model=joblib.load('linear_regression_model.joblib')
 
-st.title("Insurance Charges Prediction")
+st.title("Insurance Charges Prediction - RS Insurance")
 st.subheader("Enter the details to predict the insurance charges")
 
 claim_amount=st.number_input("Enter the claim amount: ",min_value=0.0,format="%.2f")
