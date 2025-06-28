@@ -11,12 +11,7 @@ st.markdown("""<style>.main {background-color: #f0f8ff; padding: 20px; border-ra
 # Wrap your content in a <div class="main">
 st.markdown('<div class="main">', unsafe_allow_html=True)
 
-
-
 #########
-
-
-
 
 #st.title("********   RS Insurance   ******** ")
 st.markdown("<h1 style='text-align: center; color: blue;'>********   RS Insurance   ********</h1>", unsafe_allow_html=True)
@@ -36,10 +31,10 @@ children=st.number_input("**Enter the number of children:** ",min_value=0)
 smoker=st.selectbox("**Select the smoker status:** ",["Yes","No"])
 smoker_encoded=1 if smoker=="Yes" else 0
 
-# Close the div
-st.markdown('</div>', unsafe_allow_html=True)
-
 if st.button("**Predict Charges**"):
   input_data=np.array([[claim_amount,past_consultations,hospital_expenditure,annual_salary,children,smoker_encoded]])
   prediction=model.predict(input_data)[0]
   st.success(f"The predicted insurance charges are: ${prediction:.2f}")
+
+# Close the div
+st.markdown('</div>', unsafe_allow_html=True)
