@@ -5,11 +5,20 @@ import joblib
 model=joblib.load('linear_regression_model.joblib')
 
 #####
-# Inject background color using HTML and CSS
-st.markdown("""<style>.main {background-color: #f0f8ff; padding: 20px; border-radius: 10px; } </style> """, unsafe_allow_html=True)
+# Inject CSS to change the background of the main content area
+st.markdown(
+    """
+    <style>
+    [data-testid="stAppViewContainer"] > .main {
+        background-color: #f0f8ff;
+        padding: 20px;
+        border-radius: 10px;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
-# Wrap your content in a <div class="main">
-st.markdown('<div class="main">', unsafe_allow_html=True)
 
 #########
 
@@ -36,5 +45,3 @@ if st.button("**Predict Charges**"):
   prediction=model.predict(input_data)[0]
   st.success(f"The predicted insurance charges are: ${prediction:.2f}")
 
-# Close the div
-st.markdown('</div>', unsafe_allow_html=True)
