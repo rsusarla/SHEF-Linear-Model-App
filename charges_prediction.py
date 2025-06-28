@@ -4,30 +4,10 @@ import joblib
 
 model=joblib.load('linear_regression_model.joblib')
 
-#####
-# Inject CSS to change the background of the main content area
-st.markdown(
-    """
-    <style>
-    [data-testid="stAppViewContainer"] > .main {
-        background-color: #f0f8ff;
-        padding: 20px;
-        border-radius: 10px;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
-
-#########
-
 #st.title("********   RS Insurance   ******** ")
 st.markdown("<h1 style='text-align: center; color: blue;'>********   RS Insurance   ********</h1>", unsafe_allow_html=True)
 
-
 #st.header("   Insurance Charges Prediction   ")
-
 st.markdown("<h2 style='text-align: center;'>Insurance Charges Prediction</h2>", unsafe_allow_html=True)
 
 st.subheader("Enter the details to predict the insurance charges")
@@ -44,4 +24,3 @@ if st.button("**Predict Charges**"):
   input_data=np.array([[claim_amount,past_consultations,hospital_expenditure,annual_salary,children,smoker_encoded]])
   prediction=model.predict(input_data)[0]
   st.success(f"The predicted insurance charges are: ${prediction:.2f}")
-
