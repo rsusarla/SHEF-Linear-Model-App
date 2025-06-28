@@ -3,7 +3,7 @@ import streamlit as st
 import numpy as np
 import joblib
 
-model=joblib.load('/content/linear_regression_model.joblib')
+model=joblib.load('linear_regression_model.joblib')
 
 st.title("Insurance Charges Prediction")
 st.subheader("Enter the details to predict the insurance charges")
