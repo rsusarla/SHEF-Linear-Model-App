@@ -36,11 +36,10 @@ children=st.number_input("**Enter the number of children:** ",min_value=0)
 smoker=st.selectbox("**Select the smoker status:** ",["Yes","No"])
 smoker_encoded=1 if smoker=="Yes" else 0
 
+# Close the div
+st.markdown('</div>', unsafe_allow_html=True)
+
 if st.button("**Predict Charges**"):
   input_data=np.array([[claim_amount,past_consultations,hospital_expenditure,annual_salary,children,smoker_encoded]])
   prediction=model.predict(input_data)[0]
   st.success(f"The predicted insurance charges are: ${prediction:.2f}")
-
-
-# Close the div
-st.markdown('</div>', unsafe_allow_html=True)
