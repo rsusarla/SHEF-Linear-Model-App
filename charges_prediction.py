@@ -40,3 +40,7 @@ if st.button("**Predict Charges**"):
   input_data=np.array([[claim_amount,past_consultations,hospital_expenditure,annual_salary,children,smoker_encoded]])
   prediction=model.predict(input_data)[0]
   st.success(f"The predicted insurance charges are: ${prediction:.2f}")
+
+
+# Close the div
+st.markdown('</div>', unsafe_allow_html=True)
